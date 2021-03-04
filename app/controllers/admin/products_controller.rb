@@ -1,7 +1,9 @@
+
 class Admin::ProductsController < ApplicationController
+  # include ActionView::Helpers::NumberHelper 
 
   def index
-    @products = Product.order(id: :desc).all
+    @products = Product.all.order(id: :desc)
   end
 
   def new
