@@ -1,6 +1,7 @@
 
 class Admin::ProductsController < ApplicationController
   # include ActionView::Helpers::NumberHelper 
+  http_basic_authenticate_with name: "jungle", password: "book"
 
   def index
     @products = Product.all.order(id: :desc)

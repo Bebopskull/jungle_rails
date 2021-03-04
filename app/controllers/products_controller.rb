@@ -9,3 +9,6 @@ class ProductsController < ApplicationController
   end
 
 end
+
+
+ # except: :index
