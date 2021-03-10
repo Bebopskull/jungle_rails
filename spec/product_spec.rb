@@ -25,7 +25,7 @@ RSpec.describe Product, type: :model do
 
       it "price = nil, Is not saved when not filled with all 4 validation fields" do
       	@category = Category.create! name: 'Apparel'
-				@product  = Product.create(name:'Abadia', price: '' ,quantity:'2',category: @category)
+				@product  = Product.create(name:'Abadia', price: nil,quantity:'2',category: @category)
       	
       	expect(@product).to_not be_valid
       end
